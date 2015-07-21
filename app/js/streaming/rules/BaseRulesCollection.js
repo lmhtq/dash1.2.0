@@ -17,11 +17,12 @@ MediaPlayer.rules.BaseRulesCollection = function () {
     var rules = [];
 
     return {
-        downloadRatioRule: undefined,
-        insufficientBufferRule: undefined,
+        //downloadRatioRule: undefined,
+        //insufficientBufferRule: undefined,
         //limitSwitchesRule: undefined,
-
-        getRules: function () {
+        bufferBasedRule: undefined,
+        
+		getRules: function () {
             return Q.when(rules);
         },
 
@@ -30,9 +31,10 @@ MediaPlayer.rules.BaseRulesCollection = function () {
 
             self.getRules().then(
                 function (r) {
-                    r.push(self.downloadRatioRule);
-                    r.push(self.insufficientBufferRule);
+                    //r.push(self.downloadRatioRule);
+                    //r.push(self.insufficientBufferRule);
                     //r.push(self.limitSwitchesRule);
+					r.push(self.bufferBasedRule);
                 }
             );
         }

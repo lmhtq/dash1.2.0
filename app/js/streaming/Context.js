@@ -47,6 +47,7 @@ MediaPlayer.di.Context = function () {
             this.system.mapClass('metrics', MediaPlayer.models.MetricsList);
             this.system.mapClass('downloadRatioRule', MediaPlayer.rules.DownloadRatioRule);
             this.system.mapClass('insufficientBufferRule', MediaPlayer.rules.InsufficientBufferRule);
+            this.system.mapClass('bufferBasedRule', MediaPlayer.rules.BufferBasedRule);
             this.system.mapClass('limitSwitchesRule', MediaPlayer.rules.LimitSwitchesRule);
             this.system.mapClass('abrRulesCollection', MediaPlayer.rules.BaseRulesCollection);
 
